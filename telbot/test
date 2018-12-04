@@ -1,0 +1,21 @@
+#!/system/bin/sh
+
+#bot command prefix
+#command syntax: <prefix>:<command>:<params
+prefix="n1"
+#commans dir
+workdir="/data/1sae/tel-bot/work"
+#bot token
+token=
+#chat to reply
+chat_id=
+#polling timeout (see api)
+timeout=60
+#sleep time  in sec
+#sleeptime=10
+PATH=$PATH:/system/xbin
+
+
+echo polling...
+curl -v -k --connect-timeout 30 -X POST "https://api.telegram.org/bot$token/getUpdates" -F offset=$offset -F limit=1 -F timeout=$timeout
+

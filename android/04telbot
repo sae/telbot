@@ -1,0 +1,7 @@
+#!/system/bin/sh
+#put it to /system/etc/init.d or include into /system/etc/install-recovery.sh
+#(make sure that it called on boot)
+
+/data/1sae/telbot/telbot.sh >/data/telbot.log &
+#2>$1 &
+echo "init.d telbot ok" >>/data/sae.log
